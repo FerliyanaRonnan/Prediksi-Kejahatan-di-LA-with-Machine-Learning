@@ -114,7 +114,7 @@ ROC-AUC validasi terbaik: **0,831**. Parameter kunci: `num_leaves=106`, `max_dep
 **Top 5 fitur paling berpengaruh** (LightGBM Tuned): `dist_from_center_km`, `Crm Cd`, `Vict Age`, `Premis Cd`, `occ_day`.
 
 **Faktor risiko dominan:**
-- Arrest rate sangat bervariasi per jenis kejahatan — Pembunuhan tertinggi (~60%), Pencurian/Perampokan terendah (~5%) meski mendominasi 57% dari seluruh kasus (*opportunity gap* terbesar).
+- Arrest rate sangat bervariasi per jenis kejahatan Pembunuhan tertinggi (~60%), Pencurian/Perampokan terendah (~5%) meski mendominasi 57% dari seluruh kasus (*opportunity gap* terbesar).
 - Keberadaan senjata melipatgandakan arrest rate: 17,1% (ada senjata) vs 4,9% (tanpa senjata) bukti fisik balistik memudahkan penyelidikan.
 - Variasi arrest rate antar wilayah: Harbor, Mission, dan N Hollywood punya arrest rate tertinggi (~12%).
 - Berdasarkan interpretasi SHAP (TreeExplainer, sampel 3.000 data test): jenis kejahatan, jarak dari pusat kota, dan keberadaan senjata paling konsisten mendorong prediksi ke arah "ditangkap".
