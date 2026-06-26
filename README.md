@@ -148,8 +148,8 @@ Jalankan notebook secara berurutan dari Cell 0 hingga Cell 17. Notebook dikemban
 ```
 .
 ├── notebook.ipynb
-├── archive.zip            # LAPD Crime Data mentah
-└── models/                # dibuat otomatis saat Cell 17 dijalankan
+├── archive.zip # LAPD Crime Data mentah
+└── models/ # dibuat otomatis saat Cell 17 dijalankan
     ├── lgbm_tuned.pkl
     ├── xgb_model.pkl
     ├── label_encoders.pkl
@@ -174,7 +174,7 @@ y_pred = (y_prob >= best_thr).astype(int)
 ## Catatan Metodologis
 
 - **Random split, bukan temporal split**: data dibagi 70/15/15 dengan stratified random split untuk menjaga proporsi kelas, bukan dipisah berdasarkan tahun. Cocok untuk evaluasi klasifikasi umum, namun untuk simulasi forecasting kasus di masa depan, temporal split (train 2020–2023, test 2024) akan lebih representatif.
-- **Tidak ada algoritma bagging (Random Forest) yang diuji** sebagai pembanding — fokus pada keluarga boosting karena secara struktural lebih mengurangi bias terhadap kelas minoritas dibanding bagging.
+- **Tidak ada algoritma bagging (Random Forest) yang diuji** sebagai pembanding fokus pada keluarga boosting karena secara struktural lebih mengurangi bias terhadap kelas minoritas dibanding bagging.
 - **Bobot ensemble (60:40) dipilih heuristik**, bukan hasil grid search sistematis seperti threshold optimization. Karena gap performa LightGBM vs XGBoost relatif kecil (ROC-AUC 0,832 vs 0,829), sensitivitas hasil akhir terhadap bobot diperkirakan rendah.
-- **Precision rendah (34%)** pada kelas "Ditangkap" adalah trade-off yang disengaja demi recall lebih tinggi — model ini ditujukan sebagai alat bantu prioritisasi investigasi, bukan dasar tunggal keputusan terhadap individu.
-- Label `is_arrested` mencerminkan keputusan kepolisian historis yang berpotensi mengandung bias — model sebaiknya tidak digunakan untuk profiling individu tanpa pengawasan etis tambahan.
+- **Precision rendah (34%)** pada kelas "Ditangkap" adalah trade-off yang disengaja demi recall lebih tinggi model ini ditujukan sebagai alat bantu prioritisasi investigasi, bukan dasar tunggal keputusan terhadap individu.
+- Label `is_arrested` mencerminkan keputusan kepolisian historis yang berpotensi mengandung bias model sebaiknya tidak digunakan untuk profiling individu tanpa pengawasan etis tambahan.
