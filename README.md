@@ -119,7 +119,7 @@ ROC-AUC validasi terbaik: **0,831**. Parameter kunci: `num_leaves=106`, `max_dep
 - Variasi arrest rate antar wilayah: Harbor, Mission, dan N Hollywood punya arrest rate tertinggi (~12%).
 - Berdasarkan interpretasi SHAP (TreeExplainer, sampel 3.000 data test): jenis kejahatan, jarak dari pusat kota, dan keberadaan senjata paling konsisten mendorong prediksi ke arah "ditangkap".
 
-**Catatan kehati-hatian:** kategori `NARKOBA` hanya memiliki 12 kasus di dataset — klaim arrest rate untuk kategori ini secara statistik kurang reliable karena sampel terlalu kecil.
+**Catatan kehati-hatian:** kategori `NARKOBA` hanya memiliki 12 kasus di dataset klaim arrest rate untuk kategori ini secara statistik kurang reliable karena sampel terlalu kecil.
 
 ## Model yang Diekspor
 
