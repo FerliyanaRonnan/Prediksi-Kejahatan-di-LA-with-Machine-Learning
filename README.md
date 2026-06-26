@@ -94,16 +94,16 @@ Kedua model dikombinasikan sebagai **soft voting ensemble** (LightGBM 60% + XGBo
 | **LightGBM (tuned + threshold 0,73)** | **0,8801** | **0,6540** | **0,8324** |
 | Ensemble (LightGBM 60% + XGBoost 40%) | 0,8797 | 0,6531 | 0,8320 |
 
-**Model terbaik: LightGBM (tuned + threshold 0,73)** — dipilih berdasarkan F1 Macro tertinggi.
+**Model terbaik: LightGBM (tuned + threshold 0,73)** dipilih berdasarkan F1 Macro tertinggi.
 
-### Classification Report — Model Terbaik
+### Classification Report Model Terbaik
 
 | Kelas | Precision | Recall | F1-Score | Support |
 |---|---|---|---|---|
 | Tidak Ditangkap | 0,94 | 0,92 | 0,93 | 134.144 |
 | Ditangkap | 0,34 | 0,43 | 0,38 | 13.252 |
 
-Recall kelas "Ditangkap" naik dari **0% (baseline)** menjadi **43%** — peningkatan signifikan dalam mendeteksi kasus minoritas, dengan trade-off precision yang relatif rendah (34%, banyak false positive).
+Recall kelas "Ditangkap" naik dari **0% (baseline)** menjadi **43%** peningkatan signifikan dalam mendeteksi kasus minoritas, dengan trade-off precision yang relatif rendah (34%, banyak false positive).
 
 ### Hyperparameter Terbaik (Optuna, 50 trials)
 
@@ -143,7 +143,7 @@ Library lain yang digunakan: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit
 
 ## Cara Menjalankan
 
-Jalankan notebook secara berurutan dari Cell 0 hingga Cell 17. Notebook dikembangkan di Google Colab dan memuat data dari Google Drive — sesuaikan `DATA_PATH` jika dijalankan di environment lain.
+Jalankan notebook secara berurutan dari Cell 0 hingga Cell 17. Notebook dikembangkan di Google Colab dan memuat data dari Google Drive sesuaikan `DATA_PATH` jika dijalankan di environment lain.
 
 ```
 .
