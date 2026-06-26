@@ -56,7 +56,7 @@ Kedua model dikombinasikan sebagai **soft voting ensemble** (LightGBM 60% + XGBo
   - **Lokasi**: kode area (21 divisi LAPD), koordinat LAT/LON, kode premis
   - **Kejahatan**: kode & deskripsi kejahatan (140 jenis), kode senjata
   - **Korban**: umur, jenis kelamin, ras/etnis
-  - **Status**: status penanganan kasus — basis pembentukan label `is_arrested`
+  - **Status**: status penanganan kasus basis pembentukan label `is_arrested`
 
 ### Preprocessing
 
